@@ -10,3 +10,8 @@ override.tf.json
 *_override.tf.json
 .terraformrc
 terraform.rc
+
+# Valori reali degli studenti: si committano solo i *.tfvars.example
+# (questi pattern non toccano *.tfvars.example, che non finisce per .tfvars)
+*.tfvars
+*.tfvars.json
