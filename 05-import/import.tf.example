@@ -1,0 +1,11 @@
+# Approccio dichiarativo all'import (Terraform >= 1.5), alternativo al
+# comando `terraform import` mostrato nel commento di main.tf.
+#
+# Rinomina questo file in import.tf e lancia terraform plan: Terraform
+# proporra' di importare la risorsa esistente invece di crearne una nuova.
+# Dopo l'apply questo file ha esaurito il suo scopo (l'import avviene una
+# tantum) e puoi anche eliminarlo.
+import {
+  to = google_storage_bucket.imported
+  id = var.bucket_name
+}
