@@ -1,0 +1,6 @@
+project_id = "YOUR_PROJECT_ID"
+
+allowed_ports = [
+  "80",
+  "443"
+]
