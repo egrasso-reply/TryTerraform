@@ -1,0 +1,27 @@
+# Backend remoto per lo state su GCS.
+#
+# Il bucket di stato NON puo' essere creato da questo stesso progetto:
+# per scriverci lo state servirebbe gia' un backend, che e' proprio
+# quello che stiamo configurando (problema chicken-and-egg). Il bucket
+# va quindi creato a mano, fuori da qui, prima di procedere:
+#
+#   1. Crea il bucket (una volta sola, fuori da questo progetto):
+#        gcloud storage buckets create gs://IL_TUO_BUCKET_STATE \
+#          --project=IL_TUO_PROJECT_ID --location=EU \
+#          --uniform-bucket-level-access
+#
+#   2. Assicurati che il tuo utente/SA abbia sul bucket il ruolo
+#      roles/storage.objectAdmin (o superiore)
+#
+#   3. Rinomina questo file in backend.tf e sostituisci bucket/prefix
+#      qui sotto con i tuoi valori
+#
+#   4. Rilancia terraform init: Terraform rileva il passaggio da
+#      backend locale a remoto e chiede se copiare lo state esistente
+#      nel nuovo backend, rispondi si'
+terraform {
+  backend "gcs" {
+    bucket = "YOUR_REMOTE_STATE_BUCKET"
+    prefix = "training/state-demo"
+  }
+}
