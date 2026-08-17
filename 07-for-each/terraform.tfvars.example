@@ -1,0 +1,7 @@
+project_id = "YOUR_PROJECT_ID"
+
+environments = [
+  "dev",
+  "test",
+  "prod"
+]
