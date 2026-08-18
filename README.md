@@ -22,8 +22,8 @@ durante la lezione.
 | Capitolo | Argomento | Crea risorse reali? |
 | --- | --- | --- |
 | [01-resource](01-resource) | Prima risorsa: un bucket GCS | Sì |
-| [02-variables](02-variables) | Variabili, `locals`, `validation` | Sì |
-| [03-provider](03-provider) | Configurazione del provider, data source | Sì |
+| [02-provider](02-provider) | Configurazione del provider, data source | Sì |
+| [03-variables](03-variables) | Variabili, `locals`, `validation` | Sì |
 | [04-state](04-state) | Backend remoto su GCS per lo state | Sì |
 | [05-import](05-import) | Import di risorse esistenti | Sì |
 | [06-count](06-count) | Risorse multiple con `count` | Sì |
