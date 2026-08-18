@@ -1,0 +1,14 @@
+# Backend remoto GCS, stesso bucket/SA del capitolo 4 (vedi
+# 04-state/backend.tf.example per la spiegazione completa), solo prefix
+# diverso per non far collidere lo state con gli altri capitoli.
+#
+# Per usarlo: copia questo file in backend.tf (gia' in .gitignore, i valori
+# reali non vanno mai committati), sostituisci i placeholder e rilancia
+# terraform init.
+terraform {
+  backend "gcs" {
+    bucket                      = "YOUR_REMOTE_STATE_BUCKET"
+    prefix                      = "training/10-dynamic"
+    impersonate_service_account = "YOUR_STATE_SA@YOUR_PROJECT_ID.iam.gserviceaccount.com"
+  }
+}
