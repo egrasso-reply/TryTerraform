@@ -25,7 +25,7 @@
 # di tracciarlo.
 resource "google_storage_bucket" "imported" {
   name     = var.bucket_name
-  location = "EU"
+  location = "europe-west8"
 
   uniform_bucket_level_access = true
 }

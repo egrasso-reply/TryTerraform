@@ -7,7 +7,7 @@ module "demo_bucket" {
   source = "./modules/bucket"
 
   name     = "${var.project_id}-${var.environment}-module-demo"
-  location = "EU"
+  location = "europe-west8"
 
   labels = {
     environment = var.environment

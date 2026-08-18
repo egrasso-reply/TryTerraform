@@ -2,7 +2,7 @@
 # per vedere la validation su var.environment in azione
 resource "google_storage_bucket" "example" {
   name     = local.bucket_name
-  location = "EU"
+  location = "europe-west8"
 
   uniform_bucket_level_access = true
 

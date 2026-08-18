@@ -9,7 +9,7 @@ resource "google_storage_bucket" "demo" {
   count = var.instance_count
 
   name     = "${var.project_id}-count-${count.index + 1}"
-  location = "EU"
+  location = "europe-west8"
 
   uniform_bucket_level_access = true
 }

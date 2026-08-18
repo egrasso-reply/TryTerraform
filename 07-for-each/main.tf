@@ -14,7 +14,7 @@ resource "google_storage_bucket" "environment" {
   for_each = var.environments
 
   name     = "${var.project_id}-${each.key}-foreach"
-  location = "EU"
+  location = "europe-west8"
 
   uniform_bucket_level_access = true
 
