@@ -1,14 +1,14 @@
 # Backend remoto per lo state su GCS.
 #
 # Il bucket di stato NON puo' essere creato da questo stesso progetto:
-# per scriverci lo state servirebbe gia' un backend, che e' proprio
+# per scriverci lo state servirebbe gia' un backend, che è proprio
 # quello che stiamo configurando (problema chicken-and-egg). Il bucket
 # va quindi creato a mano, fuori da qui, prima di procedere, insieme a una
 # SA dedicata con accesso al bucket, impersonata (non con una chiave) da
 # chi lancia Terraform.
 #
 # Per usarlo:
-#   1. Copia questo file in backend.tf (backend.tf e' in .gitignore: i
+#   1. Copia questo file in backend.tf (backend.tf è in .gitignore: i
 #      valori reali sotto non vanno mai committati)
 #   2. Sostituisci bucket/prefix/SA con i tuoi valori reali
 #   3. Rilancia terraform init: Terraform rileva il passaggio da backend

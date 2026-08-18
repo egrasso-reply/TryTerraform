@@ -16,7 +16,7 @@
 # In alternativa al comando `terraform import`, vedi l'approccio dichiarativo
 # in import.tf.example.
 #
-# Per mostrare che lo state e' solo una "vista" di Terraform sulla realta',
+# Per mostrare che lo state è solo una "vista" di Terraform sulla realta',
 # non la realta' stessa:
 #
 #   terraform state rm google_storage_bucket.imported

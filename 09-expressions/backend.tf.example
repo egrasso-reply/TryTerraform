@@ -3,7 +3,7 @@
 # diverso per non far collidere lo state con gli altri capitoli.
 #
 # Non essendoci risorse reali in questo capitolo, lo state contiene solo i
-# valori di output: il backend remoto qui e' facoltativo, ma lo lasciamo per
+# valori di output: il backend remoto qui è facoltativo, ma lo lasciamo per
 # coerenza con gli altri capitoli.
 #
 # Per usarlo: copia questo file in backend.tf (gia' in .gitignore, i valori
