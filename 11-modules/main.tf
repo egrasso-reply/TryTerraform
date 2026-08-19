@@ -27,7 +27,7 @@ module "demo_bucket_fabric" {
   source     = "github.com/GoogleCloudPlatform/cloud-foundation-fabric//modules/gcs?ref=v57.0.0"
   project_id = var.project_id
   name       = "${var.project_id}-${var.environment}-fabric-demo"
-  location   = "EU"
+  location   = "europe-west8"
 
   labels = {
     environment = var.environment
