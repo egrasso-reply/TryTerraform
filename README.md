@@ -32,6 +32,8 @@ durante la lezione.
 | [09-expressions](09-expressions) | Espressioni e funzioni HCL | No |
 | [10-dynamic](10-dynamic) | Blocchi `dynamic` | Sì |
 | [11-modules](11-modules) | Moduli: locale vs Cloud Foundation Fabric | Sì |
+| [12-iam](12-iam) | IAM: authoritative vs non-authoritative | Sì |
+| [13-project-module](13-project-module) | Modulo `project` di Fabric su un progetto esistente | Sì |
 
 ## Come si lancia un capitolo
 
@@ -61,6 +63,11 @@ demo (es. `terraform state list`, override con `-var`, ecc.).
 - **04-state**: dopo il primo `apply` con backend locale, si può rinominare
   `backend.tf.example` in `backend.tf` (con bucket e SA di stato reali) per
   mostrare la migrazione a un backend remoto GCS.
+- **12-iam**: prima di lanciare `apply`, verifica chi ha già il ruolo
+  `roles/browser` sul progetto (vedi commento in `main.tf`) — quel binding
+  è authoritative, sovrascrive gli altri membri di quel ruolo. Il blocco
+  `google_project_iam_policy` nei commenti non va **mai** applicato per
+  davvero senza aver prima esportato la policy IAM completa esistente.
 
 ## Note operative
 
