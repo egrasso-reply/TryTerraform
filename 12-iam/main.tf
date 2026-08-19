@@ -24,15 +24,13 @@ resource "google_project_iam_member" "demo_additive" {
 #     --flatten="bindings[].members" \
 #     --filter="bindings.role:roles/browser" \
 #     --format="table(bindings.members)"
-# roles/browser è scelto apposta per la demo perchè è improbabile che
-# qualcun altro lo abbia già su questo progetto condiviso. MAI usare
-# google_project_iam_binding su un ruolo (es. roles/editor, roles/owner) di
+# MAI usare google_project_iam_binding su un ruolo (es. roles/editor, roles/owner) di
 # cui non conosci con certezza tutti i membri attuali.
-resource "google_project_iam_binding" "demo_authoritative" {
-  project = var.project_id
-  role    = "roles/browser"
-  members = [var.demo_member]
-}
+# resource "google_project_iam_binding" "demo_authoritative" {
+#   project = var.project_id
+#   role    = "roles/browser"
+#   members = [var.demo_member]
+# }
 
 # 3) COMPLETAMENTE authoritative su TUTTA la IAM policy del progetto - non
 # è wired in questo file, solo commentato come riferimento.
