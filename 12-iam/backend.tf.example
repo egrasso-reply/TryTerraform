@@ -2,7 +2,7 @@
 # 04-state/backend.tf.example per la spiegazione completa), solo prefix
 # diverso per non far collidere lo state con gli altri capitoli.
 #
-# Per usarlo: copia questo file in backend.tf (gia' in .gitignore, i valori
+# Per usarlo: copia questo file in backend.tf (già in .gitignore, i valori
 # reali non vanno mai committati), sostituisci i placeholder e rilancia
 # terraform init.
 terraform {

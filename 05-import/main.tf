@@ -11,13 +11,13 @@
 #     -> compare google_storage_bucket.imported
 #
 #   terraform plan
-#     -> nessuna modifica: la risorsa importata combacia gia' col codice
+#     -> nessuna modifica: la risorsa importata combacia già col codice
 #
 # In alternativa al comando `terraform import`, vedi l'approccio dichiarativo
 # in import.tf.example.
 #
-# Per mostrare che lo state è solo una "vista" di Terraform sulla realta',
-# non la realta' stessa:
+# Per mostrare che lo state è solo una "vista" di Terraform sulla realtà,
+# non la realtà stessa:
 #
 #   terraform state rm google_storage_bucket.imported
 #

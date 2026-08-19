@@ -1,7 +1,7 @@
 # Il modulo "project" di Fabric NON crea il progetto: project_reuse punta a
-# uno gia' esistente (qui, il progetto del corso) tramite una data source
-# interna al modulo, e lo gestisce da li' in poi (API, IAM, policy...).
-# E' esattamente lo scenario del workshop: il progetto esiste gia', creato
+# uno già esistente (qui, il progetto del corso) tramite una data source
+# interna al modulo, e lo gestisce da lì in poi (API, IAM, policy...).
+# è esattamente lo scenario del workshop: il progetto esiste già, creato
 # a mano, e Terraform prende in carico solo la sua gestione.
 #
 # Stessa distinzione authoritative/non-authoritative del capitolo 12, ma nel
@@ -22,7 +22,7 @@ module "project" {
     "compute.googleapis.com",
   ]
 
-  # Additive: aggiunge il binding senza toccare permessi gia' presenti sul
+  # Additive: aggiunge il binding senza toccare permessi già presenti sul
   # progetto - stessa logica sicura di google_project_iam_member nel
   # capitolo 12, qui gestita dal modulo invece che a mano.
   iam_by_principals_additive = {

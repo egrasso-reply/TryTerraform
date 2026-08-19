@@ -1,6 +1,6 @@
 variable "project_id" {
   type        = string
-  description = "ID del progetto Google Cloud gia' esistente da gestire"
+  description = "ID del progetto Google Cloud già esistente da gestire"
 }
 
 variable "demo_member" {

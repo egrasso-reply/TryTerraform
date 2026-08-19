@@ -1,7 +1,7 @@
 # Backend remoto per lo state su GCS.
 #
-# Il bucket di stato NON puo' essere creato da questo stesso progetto:
-# per scriverci lo state servirebbe gia' un backend, che è proprio
+# Il bucket di stato NON può essere creato da questo stesso progetto:
+# per scriverci lo state servirebbe già un backend, che è proprio
 # quello che stiamo configurando (problema chicken-and-egg). Il bucket
 # va quindi creato a mano, fuori da qui, prima di procedere, insieme a una
 # SA dedicata con accesso al bucket, impersonata (non con una chiave) da
@@ -13,7 +13,7 @@
 #   2. Sostituisci bucket/prefix/SA con i tuoi valori reali
 #   3. Rilancia terraform init: Terraform rileva il passaggio da backend
 #      locale a remoto e chiede se copiare lo state esistente nel nuovo
-#      backend, rispondi si'
+#      backend, rispondi sì
 terraform {
   backend "gcs" {
     bucket                      = "YOUR_REMOTE_STATE_BUCKET"

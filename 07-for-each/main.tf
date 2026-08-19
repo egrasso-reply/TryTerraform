@@ -9,7 +9,7 @@
 #        bucket non vengono toccati. Con count, rimuovere un elemento in
 #        mezzo alla lista avrebbe fatto ricreare tutti gli indici successivi:
 #        è il motivo per cui for_each è preferibile quando gli elementi
-#        hanno un'identita' propria (qui il nome dell'ambiente).
+#        hanno un'identità propria (qui il nome dell'ambiente).
 resource "google_storage_bucket" "environment" {
   for_each = var.environments
 
